@@ -1,0 +1,27 @@
+/* Variables call var() for the method i want to use with the variable inside.*/
+:root{
+    --background-color: Grey;
+    --clock-color: black;
+    --gaming-font: @import url();
+    --clock_position: translateX(-50%) translateY(-50%);
+}
+
+html {
+    /*Example of variable*/
+    background-color: var(--background-color);
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Controls the vector of the content using translate*/
+    transform: var(--clock_position);
+    color: var(--clock-color);
+    font-size: 120px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+   
+
+
+}
