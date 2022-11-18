@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 /* Variables call var() for the method i want to use with the variable inside.*/
 :root{
-    --background-color: Grey;
-    --clock-color: black;
-    --gaming-font: @import url();
+    --background-color: black;
+    --clock-color: white;
     --clock_position: translateX(-50%) translateY(-50%);
+    --title-position: translateX(0) translateY(600%);
 }
 
 html {
@@ -19,9 +20,48 @@ html {
     transform: var(--clock_position);
     color: var(--clock-color);
     font-size: 120px;
-    font-family: Orbitron;
-    letter-spacing: 7px;
-   
+    letter-spacing: 4px;
+    font-family: 'Roboto Mono', monospace;    
+    border:  inset white 5px;
+    border-radius: 30px 30px 30px 30px;
+}
 
+@media screen and (max-width: 1800px) {
+    .Title{
+        max-width: 100%;
+        max-height: 100%;
+        transform: var(--title-position)
+    }
+    .clock{
+        transform: translateX(-50%) translateY(-110%);
+        font-size: 60px;
+        border:  inset white 5px;
+        border-radius: 30px 30px 30px 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .clock{
+        transform: translateX(-50%) translateY(-110%);
+        font-size: 25px;
+        border:  inset white 5px;
+        border-radius: 30px 30px 30px 30px;
+    }
 
 }
+
+
+
+.Title{
+   transform: var(--title-position);
+   text-align: center;
+   font-family: 'Roboto Mono', monospace;    
+   color: white;
+   max-width: 100%;
+   max-height: 100%;
+   display: block;
+}
+
+
