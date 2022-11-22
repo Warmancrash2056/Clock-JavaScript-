@@ -4,7 +4,7 @@
     --background-color: black;
     --clock-color: white;
     --clock_position: translateX(-50%) translateY(-50%);
-    --title-position: translateX(0) translateY(600%);
+    --title-position: translateX(0) translateY(770%);
 }
 
 html {
@@ -40,9 +40,39 @@ html {
     }
 }
 
+.Hour-Symbol{
+    color: white;
+    position: relative; 
+    left: 600px; 
+    bottom: -305px;
+    font-family: 'Roboto Mono', monospace;    
+}
+
+.Seconds-Symbol{
+    color: white;
+    position: relative; 
+    left: 843px; 
+    bottom: -230px;
+    font-family: 'Roboto Mono', monospace;    
+}
+
+.Minute-Symbol{
+    color: white;
+    position: relative; 
+    left: 720px; 
+    bottom: -265px;
+    font-family: 'Roboto Mono', monospace;    
+}
+
+.Milli-Symbol{
+    color: white;
+}
 
 
 @media screen and (max-width: 1200px) {
+    .Title{
+        max-width: 100%;
+    }
     .clock{
         transform: translateX(-50%) translateY(-110%);
         font-size: 25px;
@@ -64,4 +94,21 @@ html {
    display: block;
 }
 
+.Nav-Bar{
+    overflow: hidden;
+    transform: translateX(3%);
+}
+.Nav-Bar a{
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 25px 200px ;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace; 
+    border: inset white 5px;   
+}
 
+.Nav-Bar a:hover{
+    color: lightblue;
+}

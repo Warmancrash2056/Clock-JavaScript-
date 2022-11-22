@@ -3,6 +3,7 @@ function showTime(){
     var h = get_exact_time.getHours(); // 0 - 23
     var m = get_exact_time.getMinutes(); // 0 - 59
     var s = get_exact_time.getSeconds(); // 0 - 59
+    var milli = get_exact_time.getMilliseconds(); // 0 -1000
     var session = "AM";
     
     if(h == 0){
@@ -18,8 +19,9 @@ function showTime(){
     h = (h < 10) ? "0" + h : h; /* Ternary operator jus reassign to the same value*/
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
+    milli = (milli < 1000) ? "0" + milli : milli;
     
-    var time = h + ":" + m + ":" + s + "" + session;
+    var time = h + ":" + m + ":" + s + ":"+ milli + " " + session;
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
     
